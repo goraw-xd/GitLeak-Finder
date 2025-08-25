@@ -1,4 +1,5 @@
-🧠 Project: GitLeak Finder
+
+**🧠 Project: GitLeak Finder**
 
 Tagline: “Expose the unexposed: Secrets, credentials, and digital footprints—revealed.”
 ---
@@ -12,11 +13,6 @@ Tagline: “Expose the unexposed: Secrets, credentials, and digital footprints�
     - Contributions, issues, and feature requests are welcome!
     - Please open an issue or submit a pull request.
 
----
-GitLeak Finder — Catch the leaks before the hackers do.
-Your repos, your history, your exposure — revealed.
-
----
 
 ## 🎯 Project Goal
 
@@ -196,7 +192,7 @@ Example Detection Case:
 ---
 Severity	Leak Type	Repo	File	Commit	Author	Risk
 CRITICAL	AWS Key	user123/dev-project	config.py	5e6d2a3	user123@example.com
-	F
+    F
 ---    
 Explanation:
 
