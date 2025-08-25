@@ -134,9 +134,9 @@ Slide 4: Architecture Diagram (above).
                        │   GitLeak Finder CLI/API  │
                        │  (repo_fetcher.py)        │
                        └───────────┬───────────────┘
-                                    │
-             ┌──────────────────────┴────────────────────────┐
-             ▼                                               ▼
+                                   │
+                ┌──────────────────┴────────────────────────┐
+                ▼                                           ▼
         ┌───────────────┐                            ┌────────────────┐
         │ Secret Scanner│                            │   OSINT Layer  │
         │ regex_engine  │                            │ identity_map   │
@@ -194,7 +194,6 @@ Example Detection Case:
 ---
 Severity	Leak Type	Repo	File	Commit	Author	Risk
 CRITICAL	AWS Key	user123/dev-project	config.py	5e6d2a3	user123@example.com
-    F
 ---    
 Explanation:
 
@@ -415,22 +414,15 @@ GitLeak Finder combines all of the above plus deep identity + exposure mapping.
 -------------------------------------------------------------------------------
 🏗️ Installation
 # Clone repo
-git clone https://github.com/your-username/GitLeak-Finder.git
+git clone https://github.com/goraw-xd/GitLeak-Finder.git
 cd GitLeak-Finder
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run tool
-python gitleakfinder.py --repo https://github.com/example/repo.git
-
----
 🛠️ Example Usage
 # Scan a GitHub repo
 python gitleakfinder.py --repo https://github.com/org/project.git
-
-# Scan a GitLab repo
-python gitleakfinder.py --repo https://gitlab.com/user/project.git
 
 # Enable OSINT overlay
 python gitleakfinder.py --repo https://github.com/user/repo.git --osint
